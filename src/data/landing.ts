@@ -164,7 +164,6 @@ export const audienceCopy: Record<
   Audience,
   {
     kicker: string;
-    h1: React.ReactNode;
     subtitle: string;
     bullets: string[];
     cta: string;
