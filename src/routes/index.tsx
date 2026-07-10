@@ -1,24 +1,44 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AudienceProvider, useAudience } from "@/components/landing/audience";
+import { Header } from "@/components/landing/header";
+import { Hero } from "@/components/landing/hero";
+import { TrustStrip } from "@/components/landing/trust-strip";
+import { BusinessBlock } from "@/components/landing/business-block";
+import { FinanceBlock } from "@/components/landing/finance-block";
+import { Glossary } from "@/components/landing/glossary";
+import { Testimonials } from "@/components/landing/testimonials";
+import { ContactForm } from "@/components/landing/contact-form";
+import { Footer } from "@/components/landing/footer";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <AudienceProvider>
+      <div className="relative min-h-screen">
+        <Header />
+        <main>
+          <Hero />
+          <TrustStrip />
+          <AudienceSections />
+          <Glossary />
+          <Testimonials />
+          <ContactForm />
+        </main>
+        <Footer />
+      </div>
+    </AudienceProvider>
+  );
+}
+
+function AudienceSections() {
+  const { audience } = useAudience();
+  return (
+    <>
+      <BusinessBlock hidden={audience !== "business"} />
+      <FinanceBlock hidden={audience !== "finance"} />
+    </>
   );
 }
