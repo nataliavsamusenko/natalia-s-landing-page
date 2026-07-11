@@ -3,7 +3,6 @@ import { useAudience } from "./audience";
 import { HeroBackground } from "./hero-background";
 import { TelegramCTA } from "./telegram-cta";
 import { audienceCopy } from "@/data/landing";
-import heroAsset from "@/assets/natalia-hero.png.asset.json";
 import { cn } from "@/lib/utils";
 
 export function Hero() {
@@ -102,7 +101,7 @@ export function Hero() {
             />
             <div className="relative h-full w-full overflow-hidden rounded-[28px] glass emerald-glow animate-float-slow">
               <img
-                src={heroAsset.url}
+                src="/natalia-hero.jpg"
                 alt="Наталья Самусенко — финансовый директор и наставник"
                 className="h-full w-full object-cover"
                 loading="eager"

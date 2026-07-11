@@ -93,7 +93,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Управленческий учёт, финмодель, наставничество для финансистов и практикум «Финансовый директор».",
       },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "/natalia-hero.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: "/natalia-hero.jpg" },
       { name: "theme-color", content: "#0b0e0d" },
     ],
     links: [
