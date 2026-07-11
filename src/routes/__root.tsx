@@ -86,17 +86,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { name: "author", content: "Наталья Самусенко" },
       { property: "og:site_name", content: "Наталья Самусенко" },
-      { property: "og:title", content: "Наталья Самусенко — CFO и наставник финансистов" },
+      { property: "og:title", content: "Наталья Самусенко — CFO, консультант и наставник финансистов" },
       {
         property: "og:description",
         content:
-          "Управленческий учёт, финмодель, наставничество для финансистов и практикум «Финансовый директор».",
+          "Финансовый директор с 17-летним опытом. Помогаю бизнесу навести порядок в деньгах и провожу финансистов в роль CFO.",
       },
       { property: "og:type", content: "website" },
       { property: "og:image", content: "/natalia-hero.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: "/natalia-hero.jpg" },
       { name: "theme-color", content: "#0b0e0d" },
+      { name: "twitter:title", content: "Наталья Самусенко — CFO, консультант и наставник финансистов" },
+      { name: "twitter:description", content: "Финансовый директор с 17-летним опытом. Помогаю бизнесу навести порядок в деньгах и провожу финансистов в роль CFO." },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
