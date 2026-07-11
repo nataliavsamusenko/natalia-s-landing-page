@@ -9,6 +9,11 @@ export function Hero() {
   const { audience, setAudience } = useAudience();
   const copy = audienceCopy[audience];
 
+  const scrollToAudienceContent = () => {
+    const targetId = audience === "business" ? "cases" : "programs";
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section id="top" className="relative isolate overflow-hidden pt-28 lg:pt-32">
       <HeroBackground />
@@ -80,12 +85,13 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
             <TelegramCTA size="lg">{copy.cta}</TelegramCTA>
-            <a
-              href="#cases"
+            <button
+              type="button"
+              onClick={scrollToAudienceContent}
               className="inline-flex items-center gap-2 rounded-full px-5 py-4 text-sm text-foreground/80 transition-colors hover:text-[color:var(--gold)]"
             >
-              Смотреть кейсы →
-            </a>
+              {audience === "business" ? "Смотреть кейсы" : "Смотреть программы"} →
+            </button>
           </div>
         </div>
 

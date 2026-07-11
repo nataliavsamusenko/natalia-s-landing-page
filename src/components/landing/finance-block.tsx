@@ -34,7 +34,7 @@ function FlipCard({ front, back }: { front: string; back: string }) {
 export function FinanceBlock({ hidden }: { hidden: boolean }) {
   return (
     <section
-      id="finance"
+      id="finance-content"
       hidden={hidden}
       aria-labelledby="finance-title"
       className="relative py-20 sm:py-28"
@@ -60,7 +60,7 @@ export function FinanceBlock({ hidden }: { hidden: boolean }) {
           </div>
         </div>
 
-        <div className="mt-16">
+        <div id="programs" className="mt-16 scroll-mt-24">
           <h3 className="font-display text-2xl">Форматы работы</h3>
           <div className="mt-6 grid gap-5 md:grid-cols-3">
             {programs.map((p) => (

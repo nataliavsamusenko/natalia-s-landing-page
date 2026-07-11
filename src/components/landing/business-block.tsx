@@ -5,7 +5,7 @@ import { TelegramCTA } from "./telegram-cta";
 export function BusinessBlock({ hidden }: { hidden: boolean }) {
   return (
     <section
-      id="business"
+      id="business-content"
       hidden={hidden}
       aria-labelledby="business-title"
       className="relative py-20 sm:py-28"
@@ -21,7 +21,7 @@ export function BusinessBlock({ hidden }: { hidden: boolean }) {
           </p>
         </div>
 
-        <div id="cases" className="mt-14">
+        <div id="cases" className="mt-14 scroll-mt-24">
           <div className="flex items-end justify-between gap-4">
             <h3 className="font-display text-2xl sm:text-3xl">Кейсы</h3>
             <span className="text-xs text-muted-foreground">Ситуация → действие → результат</span>
